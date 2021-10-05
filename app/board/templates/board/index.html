@@ -1,0 +1,36 @@
+{% extends 'board/base.html' %}
+
+{% load crispy_forms_tags %}
+{% load i18n %}
+
+{% block main %}
+    <div class="row">
+        <div class="col-12 col-md-8">
+            <table class="table">
+                <thead>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Time load</th>
+                <th scope="col">Time check</th>
+                <th scope="col">Time size</th>
+                <th scope="col">Time unload</th>
+                <th scope="col">Time total</th>
+                </thead>
+                <tbody>
+                {% for entry in entries %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ entry.name }}{% if entry.staff %} <i>(staff)</i>{% endif %}</td>
+                        <td>{{ entry.score }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+            <h3>{% translate 'Upload your own solution!' %}</h3>
+            <p>{% translate 'Upload a <code>.zip</code> file of your <code>dictionary.h</code>, <code>dictionary.c</code> and <code>Makefile</code>. You may upload any number of times!' %}</p>
+            {% crispy form %}
+        </div>
+    </div>
+{% endblock %}
