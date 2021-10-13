@@ -28,10 +28,10 @@ class SubmitForm(forms.ModelForm):
     def clean_student_number(self):
         nr = self.cleaned_data['student_number']
 
-        if 7 > len(str(nr)) > 8:
+        if len(str(nr)) in {7, 8}:
             raise ValidationError(_('Invalid student number'), code='length')
 
-        if not(mod11(nr)):
+        if not mod11(nr):
             raise ValidationError(_('Invalid student number'), code='mod11')
 
         return nr
@@ -41,8 +41,7 @@ class SubmitForm(forms.ModelForm):
         fields = [
             'name',
             'student_number',
-            'type',
             'staff',
+            'type',
             'submission',
-
         ]

@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-04 17:40+0200\n"
+"POT-Creation-Date: 2021-10-13 22:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: Marijn Doeve <marijn@doeve.me>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
@@ -34,7 +34,7 @@ msgstr ""
 msgid "Hashtable"
 msgstr ""
 
-#: board/models.py:22
+#: board/models.py:22 board/models.py:43 board/models.py:55
 msgid "Name"
 msgstr "Naam"
 
@@ -54,15 +54,45 @@ msgstr "Assistent"
 msgid "Submission"
 msgstr "Inzending"
 
-#: board/templates/board/header.html:20
+#: board/models.py:44 board/models.py:56
+msgid "File"
+msgstr "Bestand"
+
+#: board/models.py:47
+msgid "Dictionary"
+msgstr "Woordenboek"
+
+#: board/models.py:48
+msgid "Dictionaries"
+msgstr "Woordenboeken"
+
+#: board/models.py:74
+msgid "Title"
+msgstr "Titel"
+
+#: board/models.py:75
+msgid "Slug"
+msgstr ""
+
+#: board/templates/board/footer.html:4
+msgid ""
+"Marijn Doeve, based on orginal work by Ben Witzen and Quinten van der Post."
+msgstr ""
+"Marijn Doeve, gebaseerd op werk van Ben Witzen en Quinten van der Post."
+
+#: board/templates/board/header.html:21
 msgid "Logout"
 msgstr "Uitloggen"
 
-#: board/templates/board/index.html:31
+#: board/templates/board/index.html:25
+msgid "staff"
+msgstr "assistent"
+
+#: board/templates/board/index.html:37
 msgid "Upload your own solution!"
 msgstr "Upload je eigen inzening"
 
-#: board/templates/board/index.html:32
+#: board/templates/board/index.html:38
 msgid ""
 "Upload a <code>.zip</code> file of your <code>dictionary.h</code>, "
 "<code>dictionary.c</code> and <code>Makefile</code>. You may upload any "

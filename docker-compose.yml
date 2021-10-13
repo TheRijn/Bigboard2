@@ -1,7 +1,7 @@
 version: '3'
 services:
-  reddis:
-    image: redis:latest
+#  reddis:
+#    image: redis:latest
   web:
     build:
       context: ./app
